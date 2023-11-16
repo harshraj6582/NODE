@@ -7,7 +7,7 @@ const products = data.products;
 
 const server = http.createServer((req, res) => {
     console.log("We are Printing the Deatils Of the type of The request as Well as METHOD AND URL ")
-  console.log(req.url, req.method);
+    console.log(req.url, req.method);
 
   if(req.url.startsWith('/product')){
     const id = req.url.split('/')[2]
@@ -21,14 +21,7 @@ const server = http.createServer((req, res) => {
           res.end(modifiedIndex);
           return;
   }
-//   '/product':
-//       res.setHeader('Content-Type', 'text/html');
-//       let modifiedIndex = index.replace('**title**', product.title)
-//       .replace('**url**', product.thumbnail)
-//       .replace('**price**', product.price)
-//       .replace('**rating**', product.rating)
-//       res.end(modifiedIndex);
-//       break;
+
 
 
 
@@ -48,9 +41,7 @@ const server = http.createServer((req, res) => {
   }
 
   console.log('server started  ');
-  //   res.setHeader('Dummy', 'DummyValue');
-
-  //
+ 
 });
 
-server.listen(8080);
+server.listen(3000);
